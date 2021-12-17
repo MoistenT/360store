@@ -1,0 +1,185 @@
+#left-aside {
+  float: left;
+  margin: -240px 0 0 80px;
+  position: sticky;
+  bottom: 20%;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #ccc;
+  transform: scale(0);
+  transition: all .5s;
+
+  a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    color: #666;
+    text-align: center;
+    transition: all 0.3s ease-out;
+
+    span {
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      transition: all 0.3s ease-out;
+
+      span:last-child {
+        border: none;
+      }
+    }
+
+    &:hover {
+      .current;
+    }
+  }
+
+  .current {
+    background: #f6f6f6;
+    color: #dd0e00;
+    font-weight: 700;
+
+    span {
+      transform: translateX(2px);
+    }
+  }
+}
+
+#right-aside {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 9;
+  border-left: 1px solid #e7e7e7;
+  background: rgba(255, 255, 255, 0.8);
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    transition: all 0.3s ease-out;
+
+    .icon {
+      display: inline-block;
+      margin: 8px 0;
+      width: 20px;
+      height: 20px;
+      background: url(../images/icon.png) no-repeat;
+    }
+
+    .hover-img {
+      position: absolute;
+      display: none;
+      right: 100%;
+      bottom: 0;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      background-color: #fff;
+      border-radius: 2px;
+      box-shadow: 0 0 4px 0 rgb(0, 0, 0, 0.5);
+      text-align: center;
+      z-index: 1;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
+
+      .hover-img {
+        display: block;
+      }
+    }
+  }
+
+  .middle {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+
+    .feedback {
+      .icon {
+        background-position: -172px -81px;
+      }
+    }
+
+    .wechat {
+      .icon {
+        background-position: -172px -105px;
+      }
+
+      .hover-img {
+        width: 110px;
+        height: auto;
+        padding: 2px;
+
+        .wechat-qrcode {
+          width: 106px;
+          height: 106px;
+          background: url(../images/wechat.png) no-repeat center top;
+          background-size: contain;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .contact {
+      .icon {
+        background-position: -172px -129px;
+      }
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 160px;
+    right: 0;
+    width: 100%;
+
+    .qrcode {
+      .icon {
+        background-position: -172px -154px;
+      }
+
+      .click-img {
+        width: 128px;
+        height: 230px;
+        position: absolute;
+        right: 30px;
+        bottom: 0;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+        i {
+          display: block;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: url(https://p2.qhimg.com/t011705ed887cfa0629.png) no-repeat center;
+        }
+      }
+    }
+
+    .back-top {
+      transform: scale(0);
+      transition: all 0.3s;
+
+      .icon {
+        background-position: -172px -180px;
+      }
+    }
+  }
+}

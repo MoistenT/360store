@@ -1,0 +1,150 @@
+.activity .activity-item {
+  width: 280px;
+  height: 242px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.activity .activity-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.activity .activity-item a img {
+  width: 100%;
+  height: 100%;
+}
+.mod {
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+.mod .header {
+  padding: 0;
+  margin-bottom: 5px;
+}
+.mod .header span {
+  margin: 0 10px 0 0;
+  font-size: 20px;
+}
+.mod .header a {
+  font-size: 14px;
+  color: #666;
+}
+.mod .flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mod .flex .mod-item {
+  width: 280px;
+  height: 460px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.mod .flex .mod-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+  background-color: #fff;
+}
+.mod .flex .mod-item a .top-label {
+  margin-bottom: 20px;
+  width: 80px;
+  height: 20px;
+  background-color: #f17f38;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+}
+.mod .flex .mod-item a img {
+  width: 240px;
+  height: 240px;
+}
+.mod .flex .mod-item a .name {
+  margin: 30px 0 0;
+  font-size: 18px;
+}
+.mod .flex .mod-item a .desc {
+  font-size: 14px;
+  color: #999;
+}
+.mod .flex .mod-item a .price {
+  color: #dd0e00;
+  font-size: 20px;
+}
+.mod .flex .mod-item a .price del {
+  font-size: 14px;
+  color: #999;
+}
+.mod .flex .mod-item:first-child {
+  width: 580px;
+}
+.mod .flex .mod-item:first-child a {
+  padding: 0;
+}
+.mod .flex .mod-item:first-child img {
+  width: 100%;
+  height: 100%;
+}
+.mod .flex .more-item {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 345px;
+}
+.mod .flex .more-item a {
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.mod .flex .more-item a img {
+  width: 180px;
+  height: 180px;
+}
+.mod .flex .more-item a .name {
+  margin: 25px 0 0;
+  width: 180px;
+  height: 40px;
+  font-size: 14px;
+}
+.mod .flex .more-item a .price {
+  margin: 10px 0 0;
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  color: #dd0e00;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mod .flex .more-item a .bottom-label {
+  margin: 0 auto;
+  width: 52px;
+  height: 17px;
+  line-height: 15px;
+  color: #f17f38;
+  border: 1px solid #f17f38;
+}
+.mod .mod-banner {
+  margin-top: -10px;
+  width: 100%;
+  height: 120px;
+}
+.mod .mod-banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('../images/mod-banner.webp') no-repeat;
+}
+.activity-item:hover,
+.mod-item:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-out;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http:////at.alicdn.com/t/font_3007983_xeco302zhbi.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+
+  <div id="head">
+    <div class="wrapper clearfix">
+      <div class="left fl">
+        <img src="https://p.ssl.qhimg.com/t01a46c936f9a7ffd94.png" alt="" class="logo">
+        <span></span>
+        <img src="https://p.ssl.qhimg.com/t01b9e6ac529f79e0ae.png" alt="" class="slogan">
+      </div>
+      <div class="right fr">
+        <a href="javascript:;">帮助中心</a>
+        <a href="javascript:;">帐号申诉</a>
+        <a href="javascript:;">帐号卫士</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="wrapper">
+      <div class="sdk fr">
+        <div class="dialog">
+          <div class="method">
+            <a href="javascript:;" class="account-login cur" data-title="phone-register-box">手机号注册</a>
+            <i></i>
+            <a href="javascript:;" class="note-login" data-title="email-register-box">邮箱注册</a>
+          </div>
+
+          <!-- 手机号注册 -->
+          <div class="phone-register-box register-box  phone_reg" style="display: block;">
+            <form action="javascript:;" method="post">
+              <div class="phone">
+                <span class="tel-prev">
+                  +86
+                  <i class="arrow-icon"></i>
+                </span>
+                <i class="iconfont form-icon">&#xe635;</i>
+                <input type="tel" placeholder="手机号" name="phonenumber" class="phonenumber" required>
+                <span class="err-msg"></span>
+              </div>
+
+              <div class="checkcode-box">
+                <i class="iconfont form-icon">&#xe7d3;</i>
+                <input type="text" placeholder="验证码" required><span class="checkcode"></span>
+                <a href="javascript:;" class="change">换一张</a>
+              </div>
+
+              <div class="note-check">
+                <i class="iconfont form-icon">&#xe645;</i>
+                <input type="text" placeholder="短信验证码" required>
+                <button>获取验证码</button>
+                <span class="err-msg" style="display: none;">验证码输入有误</span>
+              </div>
+
+              <div class="pwd">
+                <i class="iconfont form-icon">&#xe638;</i>
+                <input type="password" name="password" placeholder="密码（8-20个字符）" required class="password">
+                <span class="err-msg"></span>
+              </div>
+
+              <div class="agree-box">
+                <label>
+                  <input type="checkbox" required>
+                  阅读并同意<a href="javascript:;">360用户服务条款</a>和<a href="javascript:;">360用户隐私政策</a>
+                </label>
+              </div>
+              <input type="submit" value="注册" class="submit" data-text="phone_reg">
+            </form>
+            <p class="others">
+              <a href="javascript:;" class="fl">忘记密码？</a>
+            </p>
+            <div class="bottom">
+              <p>已经有账号？<a href="./login.html">直接登录</a></p>
+            </div>
+          </div>
+
+          <!-- 邮箱注册 -->
+          <div class="email-register-box register-box email_reg" style="display: none;">
+            <form action="javascript:;" method="post">
+              <div class="email">
+                <i class="iconfont form-icon">&#xe645;</i>
+                <input type="email" placeholder="邮箱" name="email" class="emailVal" required>
+                <span class="err-msg"></span>
+              </div>
+
+              <div class="pwd">
+                <i class="iconfont form-icon">&#xe638;</i>
+                <input type="password" placeholder="密码" class="password" required>
+                <span class="err-msg"></span>
+              </div>
+
+              <div class="checkcode-box">
+                <i class="iconfont form-icon">&#xe7d3;</i>
+                <input type="text" placeholder="验证码" required><span class="checkcode"></span>
+                <a href="javascript:;" class="change">换一张</a>
+              </div>
+
+              <div class="agree-box">
+                <label>
+                  <input type="checkbox" required>
+                  阅读并同意<a href="javascript:;">360用户服务条款</a>和<a href="javascript:;">360用户隐私政策</a>
+                </label>
+              </div>
+
+              <input type="submit" value="注册" class="submit" data-text="email_reg">
+            </form>
+            <p class="others">
+              <a href="javascript:;" class="fl">忘记密码？</a>
+            </p>
+
+            <div class="bottom">
+              <p>已经有账号？<a href="./login.html">直接登录</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>Copyright©2005-2021 360.CN All Rights Reserved 360安全中心</p>
+    <p>
+      <a href="javascript:;">
+        <img src="https://p.ssl.qhimg.com/t018b891a688f560525.png" alt="">
+        京ICP证080047号[京ICP备08010314号-6]
+      </a>
+      <a href="javascript:;">
+        京公网安备 11000002000006号
+      </a>
+    </p>
+  </div>
+
+  <script src="../javascripts/require.js" data-main="../javascripts/register.js"></script>
+</body>
+
+</html>

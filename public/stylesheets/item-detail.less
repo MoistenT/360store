@@ -1,0 +1,702 @@
+#product-detail {
+  width: 100%;
+  margin-top: 60px;
+  padding: 40px 0 0;
+  border-top: 1px solid #333;
+
+  // 商品介绍
+  .prod-intro {
+    padding: 0 0 50px;
+    overflow: hidden;
+
+    .pic {
+      width: 482px;
+      height: 700px;
+
+      .pic-box {
+        width: 100%;
+
+        .bigpic {
+          position: relative;
+          width: 482px;
+          height: 482px;
+          border: 1px solid transparent;
+
+          &:hover {
+            border: 1px solid #ccc;
+          }
+
+          .zoom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background-color: #FEDE4F;
+            cursor: move;
+            opacity: .5;
+            border: 1px solid #ddd;
+          }
+
+          .zoom-preview {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 510px;
+            height: 510px;
+            background-color: #fff;
+            background-image: url(../images/p1-01-lg.webp);
+            background-repeat: no-repeat;
+            background-size: (510/300)*480px (510/300)*480px;
+            background-position: 0 0;
+
+            margin-left: 10px;
+            z-index: 5;
+            border: 1px solid #ddd;
+            overflow: hidden;
+          }
+        }
+
+        .piclist {
+          position: relative;
+          margin: 32px 0 0;
+          width: 480px;
+          height: 92px;
+
+          .swiper {
+            width: 450px;
+            height: 92px;
+
+            .swiper-slide {
+              width: 90px;
+              height: 92px;
+              border-bottom: 3px solid transparent;
+
+              img {
+                margin-left: 1px;
+                width: 88px;
+                height: 88px;
+              }
+
+              &:hover {
+                border-color: #ccc;
+              }
+            }
+
+
+          }
+
+          .swiper-button-prev {
+            position: absolute;
+            left: 0px;
+            width: 15px;
+            height: 53px;
+            background: #FAFAFA;
+
+            &::after {
+              content: '';
+            }
+          }
+
+          .swiper-button-next {
+            position: absolute;
+            right: 0px;
+            width: 15px;
+            height: 53px;
+            background: #FAFAFA;
+
+            &::after {
+              content: '';
+            }
+          }
+
+          .iconfont {
+            user-select: none;
+          }
+
+          .disabled {
+            display: none;
+          }
+        }
+      }
+
+      .feature-box {
+        margin: 24px 0 0;
+        padding: 10px 35px;
+        background-color: #FAFAFA;
+
+        ul {
+          margin: -20px 0 0 -30px;
+        }
+
+        .feature-box-item {
+          display: inline-block;
+          margin: 20px 0 0 30px;
+          background: url(https://p1.ssl.qhimg.com/t014f3c7cc8304a06c2.png) no-repeat;
+          background-size: 16px;
+          background-position: 0 2px;
+          text-indent: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .info {
+      padding: 12px 0 0;
+      width: 678px;
+      height: 500px;
+
+      .info-title {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      .info-subtitle {
+        margin-top: 7px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #ff3333;
+      }
+
+      // 分割线
+      .divider {
+        margin-top: 11px;
+        width: 100%;
+        height: 5px;
+        background-color: #f0f0f0;
+      }
+
+      .info-wrap {
+        padding: 15px 0 0;
+
+        .info-wrap-item {
+          padding: 0 20px 10px 15px;
+          line-height: 24px;
+          height: 40px;
+          overflow: hidden;
+
+          .item-label {
+            margin: 0 5px 0 0;
+            width: 45px;
+            height: 24px;
+            font-size: 14px;
+            text-align: justify;
+            overflow: hidden;
+
+            &::after {
+              content: '';
+              width: 100%;
+              display: inline-block;
+            }
+          }
+
+        }
+      }
+
+      .wrap-1 {
+        .price {
+          .item-content {
+            .nowprice {
+              color: #fa5437;
+              font-size: 24px;
+              font-weight: 600;
+              margin-right: 3px;
+            }
+          }
+        }
+
+        .coupons {
+          .item-content {
+            i {
+              background: #FFEBE9;
+              border: 1px solid #F33;
+              box-sizing: border-box;
+              color: #F33;
+              font-weight: 400;
+              line-height: 18px;
+            }
+          }
+        }
+
+        .activity {
+          .item-content {
+            font-size: 14px;
+            color: #666;
+
+            .tag {
+              padding: 0 8px;
+              background: #FFEBE9;
+              border-radius: 15px;
+              color: #F33;
+              display: inline-block;
+              font-weight: 400;
+              line-height: 18px;
+              padding: 0 8 px;
+            }
+          }
+        }
+      }
+
+      // 公告
+      .notice {
+        background: url(https://p2.qhimg.com/t0162338fb79bf00d67.png) #FFEBC6 no-repeat 8px center;
+        background-size: 19px 19px;
+        padding: 8px 8px 8px 35px;
+        border-radius: 5px;
+        color: #F33;
+        font-size: 12px;
+        margin: 10px 0;
+        max-height: 44px;
+        overflow: hidden;
+        text-align: left;
+      }
+
+      .wrap-2 {
+        .variety {
+
+          .variety-list {
+            margin-left: 9px;
+            overflow: hidden;
+          }
+
+          .variety-item {
+            border: none;
+            margin-right: 10px;
+
+            a {
+              border-radius: 4px;
+              border: 1px solid #DDD;
+              color: #333;
+              display: block;
+              height: 26px;
+              line-height: 26px;
+              padding: 0 20px;
+              font-size: 14px;
+            }
+          }
+
+          .cur {
+            a {
+              background: #FFEBE9;
+              border-color: #F33;
+            }
+          }
+        }
+
+        .number {
+          .countipt {
+            float: left;
+            overflow: hidden;
+            margin-left: 10px;
+
+            a {
+              float: left;
+              line-height: 28px;
+              margin-left: -1px;
+              vertical-align: middle;
+              width: 28px;
+              height: 28px;
+              border: 1px solid #ddd;
+              font-family: simsun;
+              text-align: center;
+              font-size: 16px;
+              background: #F6F6F6;
+
+              &:first-of-type {
+                margin-left: 0;
+              }
+            }
+          }
+
+          .goodsCount {
+            line-height: 28px;
+            margin-left: -1px;
+            width: 44px;
+            height: 28px;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            font-family: arial;
+            text-align: center;
+            font-size: 14px;
+            color: #999;
+            background-color: #fff;
+          }
+
+          a.disabled {
+            background: #fff;
+            color: #ddd;
+            cursor: not-allowed;
+          }
+        }
+
+        .point {
+          .point-text {
+            margin-left: 10px;
+            font-size: 14px;
+
+            .tip {
+              display: inline-block;
+              vertical-align: middle;
+              cursor: pointer;
+              margin-left: 5px;
+              width: 16px;
+              height: 16px;
+              background: url(https://p1.qhimg.com/t0141ce2282c77fd367.png) no-repeat;
+              background-position: -6px 0;
+              position: relative;
+              top: -1px;
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+
+  // 按钮
+  .jsbtn-box {
+    .same {
+      display: inline-block;
+      vertical-align: top;
+      width: 202px;
+      height: 40px;
+      margin: 0 16px 0 0;
+      border-radius: 6px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid transparent
+    }
+
+    .buy {
+      .same();
+      background: #FFEBE9;
+      border-color: #F33;
+      color: #F33;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .add-shoppingC {
+      .same();
+      background: linear-gradient(180deg, #f33 0, #f63 100%);
+      color: #fff;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    .like {
+      .same();
+      width: 82px;
+      background-color: #fafafa;
+      border-color: #e7e7e7;
+
+      i {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        width: 22px;
+        height: 18px;
+        background: url(https://p1.qhimg.com/t0141ce2282c77fd367.png) no-repeat;
+        background-position: 0 -56px;
+      }
+    }
+  }
+
+  // 商品信息
+  .prod-info {
+    overflow: hidden;
+    width: 1000px;
+    margin: 0 auto;
+
+    .poster-box {
+      width: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+        margin: 0 0 5px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .tab-box {
+      width: 100%;
+      height: 52px;
+      border: 1px solid #ddd;
+      padding: 6px 0;
+
+      .jsbtn-box {
+        a {
+          margin: 0 6px 0 0;
+          width: 154px;
+          height: 36px;
+          line-height: 34px;
+          font-size: 18px;
+        }
+      }
+
+      .tab-list {
+        overflow: hidden;
+        line-height: 36px;
+
+        .tab-item {
+          display: inline-block;
+          padding: 0 30px;
+          line-height: 14px;
+          font-size: 14px;
+          border-left: 1px solid #333;
+          margin-left: -1px;
+          color: #666;
+
+          &:hover {
+            color: #333;
+          }
+
+          span {
+            position: relative;
+            display: inline-block;
+
+            &::after {
+              display: none;
+              content: '';
+              background: linear-gradient(90deg, #f33 0, rgba(255, 51, 51, .3) 100%);
+              height: 5px;
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -4px;
+            }
+          }
+        }
+
+        .cur {
+          color: #333;
+
+          span {
+            &::after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .content {
+      width: 100%;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+
+      .tab-title {
+        padding: 0 30px;
+        background: #F0F0F0;
+        border-top: 1px solid #DDD;
+        border-bottom: 1px solid #DDD;
+        color: #333;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 38px;
+      }
+
+      .tab-detail {
+        width: 100%;
+        padding-top: 20px;
+
+        img {
+          width: 100%;
+        }
+
+        .price-explain {
+          width: 100%;
+          padding: 40px 15px 30px;
+          font-size: 16px;
+          color: #999;
+          line-height: 26px;
+
+          .title {
+            text-align: center;
+            font-weight: 700;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      .tab-params {
+        width: 100%;
+
+        .params-content {
+          overflow: hidden;
+          padding: 20px 60px;
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+
+      .tab-review {
+        width: 100%;
+
+        .review-type {
+          overflow: hidden;
+          width: 100%;
+          padding: 20px 50px;
+          border-bottom: 1px solid #ddd;
+
+          .cur {
+            background: #FFEBE9;
+            border-color: #F33;
+            font-weight: 600;
+          }
+
+          >a {
+            display: block;
+            float: left;
+            font-size: 14px;
+            background: #FFF;
+            border-radius: 2px;
+            border: 1px solid #DDD;
+            font-weight: 400;
+            line-height: 26px;
+            padding: 0 14px;
+            margin-right: 10px;
+          }
+        }
+
+        .review-content {
+          width: 100%;
+          padding: 0px 50px 15px;
+
+          .review-row {
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+            overflow: hidden;
+
+            .user-info {
+              width: 150px;
+              height: 20px;
+              margin: 0 10px 0 0;
+
+              .user-info-img {
+                float: left;
+                width: 22px;
+                height: 22px;
+
+                img {
+                  width: 100%;
+                }
+              }
+
+              .user-name {
+                font-size: 14px;
+                margin-right: 5px;
+              }
+
+              .user-vip {
+                margin-top: 1px;
+                width: 17px;
+                height: 17px;
+
+                img {
+                  width: 100%;
+                }
+              }
+            }
+
+            .user-review {
+              .stars {
+                overflow: hidden;
+
+                .icon-star {
+                  margin-right: 3px;
+                  display: block;
+                  float: left;
+                  width: 16px;
+                  height: 16px;
+                  background: url(https://p2.qhimg.com/t01bcc3b26f54f25a71.png) no-repeat;
+                  background-position: 0 0;
+                }
+              }
+
+              .user-review-text {
+                margin: 10px 0 0;
+                font-size: 14px;
+              }
+
+              .user-extra {
+                margin: 20px 0 0;
+                color: #999;
+
+                .good-type {
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .tab-question {
+        width: 100%;
+
+        .question-content {
+          background: #fff;
+          margin: 0 auto;
+          overflow: hidden;
+          padding: 20px 60px;
+
+          .question-row {
+            font-size: 13px;
+
+            .question {
+              margin: 0 0 15px;
+
+              span {
+                display: inline-block;
+                vertical-align: baseline;
+                font-size: 18px;
+                width: 35px;
+              }
+
+              .icon-q {
+                margin-top: -1px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 35px;
+                height: 30px;
+                background: url(../images/q&a.png) no-repeat;
+              }
+
+            }
+
+            .answer {
+              margin: 0 0 20px;
+              padding: 0 0 15px 35px;
+
+              .icon-a {
+                margin-top: -1px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 35px;
+                height: 30px;
+                background: url(../images/q&a.png) no-repeat;
+                background-position-y: -45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

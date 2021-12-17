@@ -1,0 +1,181 @@
+.floor-box span {
+  position: relative;
+  display: inline-block;
+  margin: -10px auto 10px;
+  padding: 5px 100px;
+  width: auto;
+  font-size: 18px;
+  color: #666;
+}
+.floor-box span::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 90px;
+  height: 1px;
+  background-color: #333;
+}
+.floor-box span::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 90px;
+  height: 1px;
+  background-color: #333;
+}
+#footer .footer-top {
+  padding: 60px 0;
+  width: 100%;
+  height: 350px;
+  background-color: #fff;
+  border-top: 1px solid #e7e7e7;
+}
+#footer .footer-top .box {
+  padding: 0;
+  height: 230px;
+}
+#footer .footer-top .box h2 {
+  margin: 0 0 27px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#footer .footer-top .box .text {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: justify;
+}
+#footer .footer-top .about {
+  padding-right: 70px;
+}
+#footer .footer-top .about .icon-box {
+  margin: 20px 0 0;
+  padding-top: 20px;
+  font-size: 14px;
+  line-height: 30px;
+  border-top: 1px solid #333;
+  white-space: nowrap;
+}
+#footer .footer-top .about .icon-box span {
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+}
+#footer .footer-top .about .icon-box .hover-img {
+  display: none;
+  position: absolute;
+  top: -123px;
+  left: -52px;
+  width: 130px;
+  height: 130px;
+  background: url(https://p3.qhimg.com/t01c6e3b990efb8f77d.png) no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+#footer .footer-top .about .icon-box .hover-img img {
+  margin-top: 10px;
+  width: 106px;
+  height: 106px;
+}
+#footer .footer-top .about .icon-box .icon-wechat {
+  position: relative;
+  margin: 0 0 0 10px;
+  width: 30px;
+  background: url(../images/icon.png) no-repeat;
+  background-position: -8px -162px;
+}
+#footer .footer-top .about .icon-box .icon-wechat:hover .hover-img {
+  display: block;
+}
+#footer .footer-top .about .icon-box .icon-sina {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 10px;
+  width: 30px;
+  height: 30px;
+  background: url(../images/icon.png) no-repeat;
+  background-position: -40px -162px;
+}
+#footer .footer-top .about .icon-box .icon-sina:hover .hover-img {
+  display: block;
+}
+#footer .footer-top .help {
+  padding: 0 30px;
+}
+#footer .footer-top .help > div {
+  margin-right: 100px;
+}
+#footer .footer-top .contact {
+  border-left: 1px solid #333;
+}
+#footer .footer-top .contact > p {
+  text-align: center;
+}
+#footer .footer-top .contact .phone {
+  font-size: 28px;
+  font-weight: 700;
+}
+#footer .footer-top .contact .work-time {
+  font-size: 14px;
+  color: #999;
+}
+#footer .footer-bottom {
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+}
+#footer .footer-bottom .service-list {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px 0;
+  border-bottom: 1px solid #666;
+}
+#footer .footer-bottom .service-list a {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 30px;
+  font-size: 24px;
+  color: #fff;
+}
+#footer .footer-bottom .service-list a span {
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: top;
+  width: 32px;
+  height: 30px;
+  background: url(../images/icon.png) no-repeat;
+}
+#footer .footer-bottom .service-list a .icon-return {
+  background-position: -10px -197px;
+}
+#footer .footer-bottom .service-list a .icon-exchange {
+  background-position: -45px -197px;
+}
+#footer .footer-bottom .service-list a .icon-package {
+  background-position: -80px -197px;
+}
+#footer .footer-bottom .copyright-line {
+  padding: 18px 0 21px;
+  text-align: center;
+}
+#footer .footer-bottom .copyright-line p {
+  margin: 0;
+  line-height: 20px;
+}
+#footer .footer-bottom .copyright-line p:nth-child(1),
+#footer .footer-bottom .copyright-line p:nth-child(2) > a {
+  color: #fff;
+  font-size: 14px;
+}
+#footer .footer-bottom .copyright-line p:nth-child(3) {
+  color: rgba(255, 255, 255, 0.5);
+}

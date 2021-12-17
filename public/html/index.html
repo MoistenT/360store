@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360商城</title>
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/swiper.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_3007983_j8moebtrhrm.css">
+  <script type="module">
+    import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
+    var mySwiper = new Swiper('.swiper', {
+      // direction: 'vertical', // 垂直切换选项
+      loop: true, // 循环模式选项
+
+      speed: 500,
+      effect: 'fade',
+      autoplay: true,
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // 如果需要前进后退按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  </script>
+</head>
+
+<body>
+  <!-- 顶部 -->
+  <div id="top-box">
+    <div class="container">
+      <div class="top-nav-list fl">
+        <a href="javascript:;">帮助中心</a>
+        <a href="javascript:;">收藏</a>
+        <a href="javascript:;">360官网</a>
+        <a href="javascript:;">360智慧生活</a>
+      </div>
+      <div class="top-user fr">
+        <a href="./login.html" class="fl login-btn">登录</a>
+        <a href="./register.html" class="fl register-btn">注册</a>
+        <a href="javascript:;" class="username fl"></a>
+        <div class="fl icon-box">
+          <a href="./login.html" class="shopping-btn">
+            <i class="icon"></i>
+          </a>
+          <div class="detail-box">
+            <div class="text text-center">您的购物车还没有商品，赶紧去选购吧！</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 登录注册页 -->
+  <div id="mask" style="display: none;">
+
+    <div class="login sign-box" style="display: none;">
+      <i class="close iconfont">&#xe6ae;</i>
+      <div class="method text-center">
+        <a href="javascript:;" class="note-login active">短信登录</a>
+        <i></i>
+        <a href="javascript:;" class="account-login">360账号登录</a>
+      </div>
+      <form action="javascript:;" method="post">
+        <div class="phone">
+          <input type="text" placeholder="手机号" name="phonenumber" class="phonenumber">
+          <span class="err-msg"></span>
+        </div>
+
+        <div class="note-check">
+          <input type="password" placeholder="短信验证码" class="note-code">
+          <input type="password" placeholder="密码" class="pwd" style="display: none;">
+          <button>获取验证码</button>
+          <span class="err-msg"></span>
+        </div>
+
+        <input type="submit" value="登录" class="submit">
+      </form>
+      <p class="others">
+        <a href="javascript:;" class="fl reg-btn">快速注册</a>
+        <a href="javascript:;" class="fr">找回密码</a>
+      </p>
+    </div>
+
+    <div class="register sign-box" style="display: none;">
+
+      <i class="close iconfont">&#xe6ae;</i>
+      <div class="method text-center">
+        <a href="javascript:;" class="active">手机号注册</a>
+      </div>
+
+      <form action="javascript:;" method="post">
+        <div class="phone">
+          <i class="iconfont form-icon">&#xe635;</i>
+          <input type="text" placeholder="手机号" name="phonenumber">
+          <span class="err-msg">手机号格式有误</span>
+        </div>
+        <div class="checkcode-box">
+          <i class="iconfont form-icon">&#xe7d3;</i>
+          <input type="text" placeholder="验证码"><span class="checkcode"></span>
+          <a href="javascript:;" class="change">换一张</a>
+        </div>
+        <div class="note-check">
+          <i class="iconfont form-icon">&#xe645;</i>
+          <input type="text" placeholder="短信验证码">
+          <button>获取验证码</button>
+          <span class="err-msg">验证码输入有误</span>
+        </div>
+        <div class="pwd">
+          <i class="iconfont form-icon">&#xe638;</i>
+          <input type="password" name="password" placeholder="密码（8-20个字符）">
+          <span class="err-msg"></span>
+        </div>
+        <div class="agree-box">
+          <label>
+            <input type="checkbox">
+            阅读并同意<a href="javascript:;">《360用户服务条款》</a>和<a href="javascript:;">《360用户隐私政策》</a>
+          </label>
+        </div>
+        <input type="submit" value="注册" class="submit">
+      </form>
+      <p class="others text-right">
+        已有账号，<a href="javascript:;" class="fr log-btn">直接登录</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 导航及轮播图 -->
+  <div id="head">
+    <div class="header-box container">
+      <div class="col-lg-6 fl">
+        <a href="javascript:;" class="logo"></a>
+        <a href="javascript:;" class="nav-item">新品推荐</a>
+        <a href="javascript:;" class="nav-item">热卖榜单</a>
+      </div>
+      <div class="col-lg-6 fr">
+        <div class="search-box fr">
+          <input type="search">
+          <i class="icon"></i>
+          <div class="hot">
+            <a href="javascript:;">记录仪</a>
+            <a href="javascript:;">摄像机</a>
+            <a href="javascript:;">路由器</a>
+            <a href="javascript:;">耳机</a>
+            <a href="javascript:;">扫地机</a>
+            <a href="javascript:;">智能手表</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 目录 -->
+      <div class="category-box text-center">
+        <div class="category-all">
+          <a href="javascript:;">
+            <i class="icon-all"></i>
+            全部分类
+          </a>
+        </div>
+        <ul class="category-list">
+          <li class="category-item">
+            <a href="javascript:;">家庭安防</a>
+            <div class="item-content">
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="category-item">
+            <a href="javascript:;">安全路由</a>
+            <div class="item-content">
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="category-item">
+            <a href="javascript:;">智能手表</a>
+            <div class="item-content">
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="category-item">
+            <a href="javascript:;">汽车用品</a>
+            <div class="item-content">
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="category-item">
+            <a href="javascript:;">扫地机器人</a>
+            <div class="item-content">
+              <div class="item-content-box">
+                <a href="javascript:;">主机</a>
+                <div class="item-content-right">
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-content-box">
+                <a href="javascript:;">主机</a>
+                <div class="item-content-right">
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="javascript:;">
+                      <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                      <span>摄像机</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="category-item">
+            <a href="javascript:;">影音生活</a>
+            <div class="item-content">
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="category-item">
+            <a href="javascript:;">生态产品</a>
+            <div class="item-content">
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+              <div>
+                <a href="javascript:;">
+                  <img src="https://p4.ssl.qhimg.com/t012e56acec4dba8ef1.webp" alt="">
+                  <span>摄像机</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="banner-box">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="javascript:;" class="swiper-slider-1"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;" class="swiper-slider-2"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;" class="swiper-slider-3"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;" class="swiper-slider-4"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;" class="swiper-slider-5"></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="javascript:;" class="swiper-slider-6"></a>
+          </div>
+        </div>
+
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="main">
+    <!-- 活动 -->
+    <div class="mod activity mod-1">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>热门活动</span>
+          <!-- <a href="javascript:;">全部</a> -->
+        </div>
+        <div class="flex">
+          <div class="activity-item">
+            <a href="javascript:;">
+              <img src="../images/activity-item-1.webp" alt="">
+            </a>
+          </div>
+          <div class="activity-item">
+            <a href="javascript:;">
+              <img src="../images/activity-item-1.webp" alt="">
+            </a>
+          </div>
+          <div class="activity-item">
+            <a href="javascript:;">
+              <img src="../images/activity-item-1.webp" alt="">
+            </a>
+          </div>
+          <div class="activity-item">
+            <a href="javascript:;">
+              <img src="../images/activity-item-1.webp" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 家庭安防 -->
+    <div class="mod mod-2">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>家庭安防</span>
+          <a href="javascript:;">全部 &gt;&gt;</a>
+        </div>
+        <div class="flex">
+          <div class="mod-item">
+            <a href="javascript:;">
+              <img src="../images/mod-lg.webp" alt="">
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 安全路由 -->
+    <div class="mod mod-3">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>安全路由</span>
+          <a href="javascript:;">全部 &gt;&gt;</a>
+        </div>
+        <div class="flex">
+          <div class="mod-item">
+            <a href="javascript:;">
+              <img src="../images/mod-lg.webp" alt="">
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 行车安全 -->
+    <div class="mod mod-4">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>行车安全</span>
+          <a href="javascript:;">全部 &gt;&gt;</a>
+        </div>
+        <div class="flex">
+          <div class="mod-item">
+            <a href="javascript:;">
+              <img src="../images/mod-lg.webp" alt="">
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 扫地机器人 -->
+    <div class="mod mod-5">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>扫地机器人</span>
+          <a href="javascript:;">全部 &gt;&gt;</a>
+        </div>
+        <div class="flex">
+          <div class="mod-item">
+            <a href="javascript:;">
+              <img src="../images/mod-lg.webp" alt="">
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 智能守护 -->
+    <div class="mod mod-6">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>智能守护</span>
+          <a href="javascript:;">全部 &gt;&gt;</a>
+        </div>
+        <div class="flex">
+          <div class="mod-item">
+            <a href="javascript:;">
+              <img src="../images/mod-lg.webp" alt="">
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 生态互联 -->
+    <div class="mod mod-7">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>生态互联</span>
+          <a href="javascript:;">全部 &gt;&gt;</a>
+        </div>
+        <div class="flex">
+          <div class="mod-item">
+            <a href="javascript:;">
+              <img src="../images/mod-lg.webp" alt="">
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+          <div class="mod-item">
+            <a href="javascript:;">
+              <div class="top-label text-center center-block">新品</div>
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360可视门铃5Pro AR1C</p>
+              <p class="desc text-center">2K超清画质 166°超广视角</p>
+              <p class="price text-center">¥399 <del>¥429</del></p>
+            </a>
+          </div>
+        </div>
+        <div class="mod-banner">
+          <a href="javascript:;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 更多商品 -->
+    <div class="more mod mod-8">
+      <div class="container">
+        <div class="header col-lg-12">
+          <span>更多商品</span>
+        </div>
+        <div class="flex more-item-box">
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+          <div class="more-item">
+            <a href="javascript:;">
+              <img src="../images/mod-item.webp" alt="">
+              <p class="name text-center">360智能摄像机小水滴5C 2K高清版AC1P</p>
+              <p class="price text-center">¥149</p>
+              <div class="bottom-label text-center">直降</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结束语 -->
+    <div class="floor-box">
+      <div class="container text-center">
+        <span>我已经陪你到底了</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 楼梯选项卡 -->
+  <div id="left-aside">
+    <a href="javascript:;" class="current" data-title="mod-1"><span>热门活动</span></a>
+    <a href="javascript:;" data-title="mod-2"><span>家庭安防</span></a>
+    <a href="javascript:;" data-title="mod-3"><span>安全路由</span></a>
+    <a href="javascript:;" data-title="mod-4"><span>行车安全</span></a>
+    <a href="javascript:;" data-title="mod-5"><span>扫地机器人</span></a>
+    <a href="javascript:;" data-title="mod-6"><span>智能守护</span></a>
+    <a href="javascript:;" data-title="mod-7"><span>生态互联</span></a>
+    <a href="javascript:;" data-title="mod-8"><span>更多商品</span></a>
+  </div>
+
+  <!-- 右侧边栏 -->
+  <div id="right-aside">
+    <div class="middle">
+      <a href="javascript:;" class="feedback">
+        <span class="icon"></span>
+        <div class="hover-img">意见反馈</div>
+      </a>
+      <a href="javascript:;" class="wechat">
+        <span class="icon"></span>
+        <div class="hover-img">
+          <div class="wechat-qrcode"></div>
+          <p>关注公众号</p>
+        </div>
+      </a>
+      <a href="javascript:;" class="contact">
+        <span class="icon"></span>
+        <div class="hover-img">在线客服</div>
+      </a>
+    </div>
+    <div class="bottom">
+      <a href="javascript:;" class="qrcode">
+        <span class="icon"></span>
+        <div class="click-img" style="display: none;">
+          <img src="	https://p5.ssl.qhimg.com/t01f74c5c76d0fad490.png" alt="">
+          <i class="icon-close"></i>
+        </div>
+      </a>
+      <a href="javascript:;" class="back-top">
+        <span class="icon"></span>
+        <div class="hover-img">返回顶部</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- 页面底部 -->
+  <div id="footer" style="position: relative;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="about box col-lg-4">
+          <h2>关于商城</h2>
+          <p class="text">
+            360商城是奇虎360公司的官方电商平台，主要经营360安全智能设备，以及相关领域消费品。提供最新的360智能设备，最贴心的售后服务，360社区一手评测资讯，享受360安全、安心、放心的购物体验。</p>
+          <div class="icon-box">
+            <span>关于我们</span>
+            <span class="icon-wechat">
+              <span class="hover-img text-center">
+                <img src="../images/wechat.png">
+              </span>
+            </span>
+            <a href="javascript:;" class="icon-sina">
+              <span class="hover-img text-center">
+                <img src="../images/wechat.png">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="help box col-lg-5">
+          <div class="help-1 fl">
+            <h2>售后服务</h2>
+            <a href="javascript:;" class="text">7日无理由退货</a>
+            <a href="javascript:;" class="text">7日无理由退货</a>
+            <a href="javascript:;" class="text">7日无理由退货</a>
+            <a href="javascript:;" class="text">7日无理由退货</a>
+            <a href="javascript:;" class="text">7日无理由退货</a>
+            <a href="javascript:;" class="text">7日无理由退货</a>
+          </div>
+          <div class="help-2 fl">
+            <h2>帮助中心</h2>
+            <a href="javascript:;" class="text">用户注册</a>
+            <a href="javascript:;" class="text">用户注册</a>
+            <a href="javascript:;" class="text">用户注册</a>
+            <a href="javascript:;" class="text">用户注册</a>
+            <a href="javascript:;" class="text">用户注册</a>
+            <a href="javascript:;" class="text">用户注册</a>
+          </div>
+        </div>
+        <div class="contact box col-lg-3">
+          <h2 class="text-center">联系我们</h2>
+          <p class="phone">400-6822-360</p>
+          <p class="work-time">周一至周日 9:00-18:00（仅收市话费）</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="service-list col-lg-12">
+          <a href="javascript:;">
+            <span class="icon-return"></span>
+            7天无理由退货
+          </a>
+          <a href="javascript:;">
+            <span class="icon-exchange"></span>
+            15天免费换货
+          </a>
+          <a href="javascript:;">
+            <span class="icon-package"></span>
+            满99元包邮
+          </a>
+        </div>
+        <div class="copyright-line col-lg-12">
+          <p>©2019-2021 mall.360.cn版权所有</p>
+          <p>
+            <a href="javascript:;">京ICP备08010314号-6</a>
+            <a href="javascript:;">营业执照</a>
+          </p>
+          <p>
+            公司名称：北京视觉世界科技有限公司 | 社会统一信用代码：91110105336460203N | 食品经营许可证<br>
+            公司地址：北京市朝阳区酒仙桥路6号院2号楼1至17层102号内5层501 | 联系方式：400-6822-360
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../javascripts/require.js" data-main="../javascripts/index.js"></script>
+</body>
+
+</html>

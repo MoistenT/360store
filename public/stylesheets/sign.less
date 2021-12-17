@@ -1,0 +1,242 @@
+// 登录注册页
+#mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, .3);
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 18px;
+  }
+
+  // 通用样式（登录页）
+  .sign-box {
+    padding: 40px 0;
+    width: 360px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+
+    .method {
+
+      >* {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      i {
+        margin: 0 16px;
+        width: 1px;
+        height: 16px;
+        background-color: #e3e3e3;
+      }
+
+      a {
+        font-size: 20px;
+        border-bottom: 1px solid transparent;
+      }
+
+      .active {
+        color: #36b447;
+        border-bottom: 1px solid #36b447;
+      }
+    }
+
+    form {
+      margin: 30px auto 0;
+      width: 300px;
+      position: relative;
+
+      >div {
+        position: relative;
+      }
+
+      .err {
+        border-color: #f36903;
+
+        &:focus {
+          border-color: #f36903;
+        }
+      }
+
+      .err-msg {
+        position: absolute;
+        top: 42px;
+        left: 0;
+        display: none;
+        color: #f36903;
+        font-size: 12px;
+      }
+
+      input {
+        padding: 10px;
+        height: 42px;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        width: 100%;
+        margin-bottom: 20px;
+        outline: none;
+
+        &::placeholder {
+          color: #999;
+          font-size: 14px;
+        }
+
+        &:focus {
+          border-color: #36b447;
+        }
+      }
+
+      .note-check {
+        position: relative;
+
+        button {
+          width: 120px;
+          height: 40px;
+          position: absolute;
+          top: 1px;
+          right: 1px;
+          border: none;
+          border-left: 1px solid #ddd;
+          color: #36b447;
+          font-size: 14px;
+          background-color: #fafafa;
+        }
+      }
+
+      .submit {
+        padding: 0;
+        margin-bottom: 10px;
+        background-color: #36b447;
+        border-color: #36b447;
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+
+    .others {
+      width: 300px;
+      margin: 0 auto;
+
+      a {
+        color: #6f6f6f;
+        font-size: 14px;
+
+        &:hover {
+          color: #36b447;
+        }
+      }
+    }
+  }
+
+
+
+  // 注册页
+  .register {
+
+    width: 450px;
+
+    .form-icon {
+      position: absolute;
+      left: 0;
+      display: block;
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      text-align: center;
+      line-height: 40px;
+      color: #ccc;
+    }
+
+    .method {
+      .active {
+        border: none;
+      }
+    }
+
+    form {
+      width: 330px;
+
+      input {
+        padding-left: 0;
+        padding-left: 40px;
+      }
+
+      a {
+        color: #36b447;
+        font-size: 14px;
+      }
+
+      .checkcode-box {
+        input {
+          width: 156px;
+          vertical-align: middle;
+        }
+
+        .checkcode {
+          display: inline-block;
+          vertical-align: middle;
+          margin-bottom: 20px;
+          margin-left: 10px;
+          width: 102px;
+          height: 42px;
+          border: 1px solid #ddd;
+        }
+
+        .change {
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 15px;
+          line-height: 42px;
+          height: 42px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .agree-box {
+        font-size: 12px;
+        color: #6f6f6f;
+        margin-bottom: 10px;
+
+        label {
+          font-weight: normal;
+          margin: 0;
+
+          input {
+            margin: 0 5px 2px 0;
+            width: 12px;
+            height: 12px;
+            vertical-align: middle;
+          }
+
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .submit {
+        padding: 0;
+      }
+    }
+
+    .others {
+      width: 330px;
+      font-size: 14px;
+      color: #6f6f6f;
+
+      a {
+        color: #36b447;
+      }
+    }
+  }
+}

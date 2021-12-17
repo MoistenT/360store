@@ -1,0 +1,156 @@
+#left-aside {
+  float: left;
+  margin: -240px 0 0 80px;
+  position: sticky;
+  bottom: 20%;
+  background-color: #fff;
+  box-shadow: 0px 0px 6px #ccc;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+#left-aside a {
+  display: block;
+  width: 80px;
+  height: 30px;
+  color: #666;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+#left-aside a span {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease-out;
+}
+#left-aside a span span:last-child {
+  border: none;
+}
+#left-aside a:hover {
+  background: #f6f6f6;
+  color: #dd0e00;
+  font-weight: 700;
+}
+#left-aside a:hover span {
+  transform: translateX(2px);
+}
+#left-aside .current {
+  background: #f6f6f6;
+  color: #dd0e00;
+  font-weight: 700;
+}
+#left-aside .current span {
+  transform: translateX(2px);
+}
+#right-aside {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 9;
+  border-left: 1px solid #e7e7e7;
+  background: rgba(255, 255, 255, 0.8);
+}
+#right-aside a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 36px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+#right-aside a .icon {
+  display: inline-block;
+  margin: 8px 0;
+  width: 20px;
+  height: 20px;
+  background: url(../images/icon.png) no-repeat;
+}
+#right-aside a .hover-img {
+  position: absolute;
+  display: none;
+  right: 100%;
+  bottom: 0;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 0 4px 0 #000000;
+  text-align: center;
+  z-index: 1;
+}
+#right-aside a:hover {
+  background-color: #f0f0f0;
+}
+#right-aside a:hover .hover-img {
+  display: block;
+}
+#right-aside .middle {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 100%;
+}
+#right-aside .middle .feedback .icon {
+  background-position: -172px -81px;
+}
+#right-aside .middle .wechat .icon {
+  background-position: -172px -105px;
+}
+#right-aside .middle .wechat .hover-img {
+  width: 110px;
+  height: auto;
+  padding: 2px;
+}
+#right-aside .middle .wechat .hover-img .wechat-qrcode {
+  width: 106px;
+  height: 106px;
+  background: url(../images/wechat.png) no-repeat center top;
+  background-size: contain;
+}
+#right-aside .middle .wechat .hover-img p {
+  margin: 0;
+}
+#right-aside .middle .contact .icon {
+  background-position: -172px -129px;
+}
+#right-aside .bottom {
+  position: absolute;
+  bottom: 160px;
+  right: 0;
+  width: 100%;
+}
+#right-aside .bottom .qrcode .icon {
+  background-position: -172px -154px;
+}
+#right-aside .bottom .qrcode .click-img {
+  width: 128px;
+  height: 230px;
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+}
+#right-aside .bottom .qrcode .click-img img {
+  width: 100%;
+  height: 100%;
+}
+#right-aside .bottom .qrcode .click-img i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url(https://p2.qhimg.com/t011705ed887cfa0629.png) no-repeat center;
+}
+#right-aside .bottom .back-top {
+  transform: scale(0);
+  transition: all 0.3s;
+}
+#right-aside .bottom .back-top .icon {
+  background-position: -172px -180px;
+}

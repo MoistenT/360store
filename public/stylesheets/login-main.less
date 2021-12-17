@@ -1,0 +1,220 @@
+#main {
+  @color: #00c89f;
+  background-color: #21222D;
+  height: 640px;
+  position: relative;
+  width: 100%;
+
+  .wrapper {
+    height: 640px;
+    background: url(https://p.ssl.qhimg.com/t01f47e79d371c3a69c.png) no-repeat;
+    background-size: cover;
+
+    .sdk {
+      width: 372px;
+      height: 100%;
+      line-height: 640px;
+      box-sizing: content-box;
+
+      .dialog {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+        background-color: #fff;
+        color: #6f6f6f;
+        border-radius: 4px;
+
+        .method {
+          padding: 32px 0 0 32px;
+          font-size: 14px;
+          line-height: 1.5;
+          overflow: hidden;
+
+          a {
+            color: #999;
+            padding: 0 0 6px;
+            font-weight: 500;
+            float: left;
+            padding-bottom: 6px;
+            font-size: 20px;
+            vertical-align: middle;
+            line-height: 1;
+
+            &:hover {
+              color: @color;
+            }
+          }
+
+          i {
+            float: left;
+            width: 1px;
+            height: 20px;
+            background-color: #ccc;
+            margin: 2px 15px 0;
+            vertical-align: middle;
+          }
+
+          .cur {
+            color: #333;
+            border-bottom: 2px solid @color;
+
+            &:hover {
+              color: #333;
+            }
+          }
+        }
+
+        form {
+          margin: 0 auto;
+          padding: 30px 0 20px;
+          width: 308px;
+
+          >div {
+            padding-bottom: 20px;
+            position: relative;
+
+            .err-msg {
+              position: absolute;
+              left: 0;
+              top: 42px;
+              color: #f33;
+            }
+          }
+
+          input {
+            padding: 10px;
+            width: 308px;
+            height: 42px;
+            outline: none;
+            border: 1px solid #ddd;
+
+            &::placeholder {
+              color: #999;
+            }
+
+            &:focus {
+              border: 1px solid @color;
+            }
+          }
+
+          .submit {
+            padding: 0 10px;
+            background-color: @color;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+
+        .others {
+          margin-top: -10px;
+          padding-left: 32px;
+          overflow: hidden;
+
+          a {
+            color: #999;
+          }
+        }
+
+        .bottom {
+          width: 372px;
+          height: 65px;
+          margin-top: 10px;
+          padding: 0 32px;
+          background-color: #f7f8f8;
+          overflow: hidden;
+
+          .icons-box {
+            float: left;
+            // line-height: 65px;
+
+            i {
+              display: inline-block;
+              vertical-align: middle;
+              line-height: 65px;
+              width: 40px;
+              height: 40px;
+              font-size: 22px;
+              color: #999;
+            }
+
+          }
+
+          a {
+            float: right;
+            line-height: 65px;
+            color: @color;
+          }
+        }
+
+        .note-login-box {
+          .phone {
+            .tel-prev {
+              position: relative;
+              display: inline-block;
+              vertical-align: middle;
+              width: 80px;
+              height: 42px;
+              text-indent: 10px;
+              border: 1px solid #ddd;
+              line-height: 42px;
+
+              i {
+                width: 22px;
+                height: 22px;
+                background: url(https://p0.ssl.qhimg.com/t01b89baa0fe96db9f1.png) no-repeat;
+                position: absolute;
+                top: 10px;
+                right: 3px;
+              }
+            }
+
+            input {
+              float: right;
+              vertical-align: middle;
+              width: 222px;
+            }
+          }
+
+          .note-check {
+            width: 308px;
+            position: relative;
+
+            button {
+              background-color: #fafafa;
+              width: 120px;
+              height: 40px;
+              position: absolute;
+              top: 1px;
+              right: 1px;
+              border: none;
+              border-left: 1px solid #ddd;
+              outline: none;
+            }
+          }
+
+          .bottom {
+            height: auto;
+
+            p {
+              line-height: 1.5;
+              float: left;
+              font-size: 12px;
+              color: #666;
+              padding-bottom: 20px;
+
+              a {
+                float: none;
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

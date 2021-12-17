@@ -1,0 +1,23 @@
+#head {
+  height: auto;
+}
+#head .container {
+  width: 1180px;
+}
+#head .category-box {
+  height: auto !important;
+  margin-top: 10px;
+  background-color: transparent !important;
+}
+#head .category-box .category-all {
+  background-color: #333;
+}
+#head .category-box .category-all .category-list {
+  display: none;
+  height: 480px;
+  background-color: rgba(51, 51, 51, 0.7);
+}
+#head .category-box .category-all:hover .category-list {
+  display: block;
+  z-index: 9;
+}

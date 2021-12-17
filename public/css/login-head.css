@@ -1,0 +1,26 @@
+#head .left {
+  overflow: hidden;
+  height: 70px;
+}
+#head .left img {
+  vertical-align: middle;
+  height: 70px;
+}
+#head .left span {
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  vertical-align: middle;
+  margin-left: 19px;
+}
+#head .right {
+  line-height: 70px;
+  font-size: 14px;
+}
+#head .right a {
+  margin-left: 32px;
+}
+#head .right a:hover {
+  color: #00C89F;
+}
